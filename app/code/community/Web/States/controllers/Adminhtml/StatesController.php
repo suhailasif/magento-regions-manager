@@ -81,7 +81,7 @@ class Web_States_Adminhtml_StatesController extends Mage_Adminhtml_Controller_Ac
                     foreach ($locales as $locale) {
                         $localeName = $request->getParam('name_' . $locale);
                         if ($localeName) {
-                            $write->insert($regionName, array('region_id' => $state->getRegionId(), 'locale' => $locale, 'name' => trim($name)));
+                            $write->insert($regionName, array('region_id' => $state->getRegionId(), 'locale' => $locale, 'name' => trim($localeName)));
                         }
                     }
                 }
